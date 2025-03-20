@@ -7,19 +7,20 @@ const average=require('./routes/averageRoute')
 const user=require('./routes/userRoutes')
 const db=require('./config/db')
 const axios=require('axios')
+const postRoutes=require('./routes/post')
 app.use(cors())
 app.use(express.json())
-app.use('/api/average',average)
 
 app.use((req,res,next)=>{
     console.log(req.path)
     next()
 })
 
+app.use('/api/average',average)
+app.use("/posts", postRoutes);
 
   
   
-app.use('/api/average',average)
 
 
   
