@@ -5,7 +5,7 @@ const dotenv=require("dotenv").config()
 const port=process.env.PORT||1002;
 const average=require('./routes/averageRoute')
 const db=require('./config/db')
-
+const axios=require('axios')
 app.use(cors())
 app.use(express.json())
 
@@ -14,9 +14,13 @@ app.use((req,res,next)=>{
     next()
 })
 
+
+  
+  
 app.use('/api/average',average)
 
 
+  
 
 app.listen(port,()=>{
     console.log("app is connected to:"+port)
