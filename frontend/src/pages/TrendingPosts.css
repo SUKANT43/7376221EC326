@@ -1,0 +1,9 @@
+.trending-container {
+    padding: 20px;
+  }
+  
+  .post-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
